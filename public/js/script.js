@@ -54,8 +54,8 @@ weatherForm.addEventListener('submit',(e) => {
                     address.textContent =   titleCase(data.Address);
                     locality.textContent =   data.Locality;
                     weather.textContent =   data.Weather;
-                    temperature.textContent = data.Temperature;
-                    feelslike.textContent = data.Feels;
+                    temperature.textContent = data.Temperature + "ºC";
+                    feelslike.textContent = data.Feels + "ºC";
                     document.getElementById('paraError').style.display = 'none'; 
                 }
             }) 
