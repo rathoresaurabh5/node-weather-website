@@ -5,11 +5,13 @@ console.log('Client side JavaScript is loaded');
 //         console.log(data)
 //     })
 // })
- 
+
+//Set the initial state of page.
 document.getElementById('weatherDetails').style.display = 'none';
 document.getElementById('paraError').style.display = 'none';
 document.getElementById('loader').style.display = 'none';
 
+//Elements to be updated in pages
 const weatherForm = document.querySelector('form');
 const searchTerm = document.querySelector('input');
 const er = document.getElementById('paraError');
@@ -19,6 +21,7 @@ const weather = document.querySelector('#weather');
 const temperature = document.querySelector('#temperature');
 const feelslike = document.querySelector('#feelslike');
 
+//Async 
 weatherForm.addEventListener('submit',(e) => {
     e.preventDefault();
 
@@ -70,6 +73,7 @@ weatherForm.addEventListener('submit',(e) => {
     }    
 });
 
+//Clean user input 
 const cleanText = (str) => {
     if (str) {
         var strLower = str.toString().toLowerCase();
@@ -80,6 +84,7 @@ const cleanText = (str) => {
     return false
 } 
 
+//Format results before showing
 const titleCase = (str) => {
     var splitStr = str.toLowerCase().split(' ');
     for (var i = 0; i < splitStr.length; i++) {
