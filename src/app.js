@@ -7,6 +7,8 @@ const geocode = require('./utils/geocode');
 const chalk = require('chalk')
 
 const app = express();
+//configure/use port provided by heroku and a default port 3000 for in case we run it locally.
+const port = process.env.PORT || 3000 
 
 //Define paths for Express config
     // console.log(__dirname);
@@ -134,7 +136,7 @@ app.get('*',(req, res) => {
 //     })
 // })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
 

@@ -34,7 +34,7 @@ weatherForm.addEventListener('submit',(e) => {
         //console.log(location);
         document.getElementById('loader').style.display = 'block';
 
-        fetch('http://localhost:3000/weather?address=' + cleanText(location)).then((response) => {
+        fetch('/weather?address=' + cleanText(location)).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     document.getElementById('loader').style.display = 'none';
