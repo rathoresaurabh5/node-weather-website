@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <title>Weatherator-index</title>
+    <link rel="icon" href="/img/weather.png">
+</head>
+
+<body>
+    {{!-- <h1>{{title}}</h1> --}}
+
+
+    {{>header}}
+
+
+    <div class='imag imag-main'>
+        <div class='form1'>
+            <form class='wForm'>
+                <input placeholder='Enter an address: Indiranagar, Bangalore'>
+                <button>Search</button>
+            </form>
+        </div>
+        <div class='classError'>
+            <p id='paraError'></p>
+        </div>
+        <div class='loader' id='loader'>
+            {{!-- <img src='../img/loader6.gif'> --}}
+        </div>
+        <div class='weatherDetails' id='weatherDetails'>
+            <table class='tabWeather'>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td id='add type'>Address</td>
+                    <td id='separator'>:</td>
+                    <td id='address'>Hindu</td>
+                </tr>
+                <tr>
+                    <td id='loc type'>Locality</td>
+                    <td id='separator'>:</td>
+                    <td id='locality'>goga china phini</td>
+                </tr>
+                <tr>
+                    <td id='wea type'>Weather</td>
+                    <td id='separator'>:</td>
+                    <td id='weather'>partly cloudy</td>
+                </tr>
+                <tr>
+                    <td id='tem type'>Temperature</td>
+                    <td id='separator'>:</td>
+                    <td id='temperature'>13</td>
+                </tr>
+                <tr>
+                    <td id='fee type'>Feels Like</td>
+                    <td id='separator'>:</td>
+                    <td id='feelslike'>-12</td>
+                </tr>
+            </table>
+            {{!-- <p id='address'></p>
+        <p id='locality'></p>
+        <p id='weather'></p>
+        <p id='temperature'></p>
+        <p id='feelslike'></p> --}}
+        </div>
+    </div>
+    <div class='creator-para'>
+        <p>Created by: {{name}}</p>
+    </div>
+    {{>footer}}
+
+    <script src='/js/script.js'></script>
+</body>
+
+</html>
