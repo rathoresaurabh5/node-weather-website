@@ -8,7 +8,6 @@ This is a weather website built using Node.js, Express, and Handlebars. The webs
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
